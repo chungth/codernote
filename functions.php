@@ -81,6 +81,8 @@ add_action( 'widgets_init', 'codernote_widgets_init' );
 function codernote_scripts() {
 	wp_enqueue_style('bootstrap-css','//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css');
 	wp_enqueue_style('fontawesome','//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+	wp_enqueue_style('highlight-css','http://yandex.st/highlightjs/8.0/styles/default.min.css');
+	wp_enqueue_script('hightlight-js','http://yandex.st/highlightjs/8.0/highlight.min.js',array(),'20140214',true);
 	wp_enqueue_style( 'codernote-style', get_stylesheet_uri() );
 	wp_enqueue_script('bootstrap-js','//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js',array('jquery'),'20140214',true);
 
