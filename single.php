@@ -17,12 +17,25 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'single' ); ?>
 			<?php get_template_part('/inc/share-post');?>
 
-			<?php codernote_post_nav(); ?>
+		<div class="tag-list">
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$tag_list = get_the_tag_list( '', __( ' ', 'codernote' ) );
+
+				printf('<i class="fa fa-tags fa-lg"></i> %1$s',
+					$tag_list
+				);
+			?>
+
+		</div><!-- .tag-list -->
+
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
+				if ( comments_open() ) :
 					comments_template();
+				else:
+					comments_template('/disqus_comments.php');
 				endif;
 			?>
 
@@ -30,7 +43,8 @@ get_header(); ?>
 		</div> <!--end col content -->
 		<div class="col-md-4">
 		<?php get_sidebar(); ?>
-		<!--end col sidebar-->
+		</div><!--end col sidebar-->
+
 	</div> <!--end row-->
 </div> <!--end container-->
 

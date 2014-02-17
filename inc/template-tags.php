@@ -71,9 +71,9 @@ if ( ! function_exists( 'codernote_posted_on' ) ) :
  */
 function codernote_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+/*	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
-	}
+	}*/
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
@@ -81,8 +81,10 @@ function codernote_posted_on() {
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
 	);
+	/* translators: used between list items, there is a space after the comma */
+	$category_list = get_the_category_list( __( ', ', 'codernote' ) );
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'codernote' ),
+	printf( __( '<span class="posted-on"><i class="fa fa-clock-o"></i> %1$s</span><span class="byline"> <i class="fa fa-user"></i> %2$s</span><span class="incat"><i class="fa fa-th-list"></i> %3$s</span>', 'codernote' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
@@ -90,7 +92,8 @@ function codernote_posted_on() {
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html( get_the_author() )
-		)
+		),
+		$category_list
 	);
 }
 endif;
