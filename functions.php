@@ -69,9 +69,18 @@ function codernote_widgets_init() {
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
+		'before_title'  => '<h4 class="widget-title bg-primary">',
 		'after_title'   => '</h4>',
 	) );
+	
+	register_sidebar(array(
+		'name'	=> __('Footer','codernote'),
+		'id'	=> 'sidebar-2',
+		'before_widget'=>'<div id="%1$s" class="col-md-4 widget %2$s>"',
+		'after_widget'=> '</div>',
+		'before_title'=>'<h4 class="widget-title">',
+		'after_title' =>'</h4>',
+	));
 }
 add_action( 'widgets_init', 'codernote_widgets_init' );
 
@@ -92,6 +101,11 @@ function codernote_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'codernote_scripts' );
+/**add customize style for default editor*/
+function codernote_add_editor_styles() {
+	add_editor_style( 'inc/editor-style.css' );
+}
+add_action( 'init', 'codernote_add_editor_styles' );
 
 /**
  * Implement the Custom Header feature.

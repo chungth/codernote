@@ -7,7 +7,7 @@
 		  js = d.createElement(s); js.src = url; js.id = id;
 		  fjs.parentNode.insertBefore(js, fjs);
 		};
-		load('//connect.facebook.net/en/all.js#xfbml=1', 'fbjssdk');
+		load('//connect.facebook.net/en/all.js#xfbml=1&appId=1438477833042163', 'fbjssdk');
 		load('https://apis.google.com/js/plusone.js', 'gplus1js');
 		load('//platform.twitter.com/widgets.js', 'tweetjs');
 	  }
@@ -15,7 +15,6 @@
 	  else if (w.attachEvent) { w.attachEvent("onload",go); }
 	}(window, document, 'script'));
 	</script>
-
 	<div class="share-post">
 	<ul>
 		<li>

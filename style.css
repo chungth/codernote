@@ -18,7 +18,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 .share-post{
     background: none repeat scroll 0 0 #F7F7F7;
-    border-top: 1px solid #EAEAEA;
+    border: 1px solid #EAEAEA;
     clear: both;
     padding: 10px 0 20px 10px;
 }
@@ -70,7 +70,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	color: #2A6496;
 }
 .widget-title {
-    background: none repeat scroll 0 0 #E7E7E7;
     border-radius: 20px 0;
     padding: 10px 20px;
 }
@@ -87,8 +86,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
     float: right;
 }
 .entry-header {
-    border-bottom: 1px solid #F2F2F2;
-    margin-bottom: 15px;
+    height: 155px;
+    position: relative;
+}
+.entry-title{
+	margin-left:152px;
+}
+.entry-meta {
+    bottom: 5px;
+    position: absolute;
+    right: 0;
 }
 .entry-meta > span{
     margin-right: 10px;
@@ -123,4 +130,33 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .tag-list a:hover {
     background: none repeat scroll 0 0 #FFFFFF;
+}
+.tag-list i{
+	color: #5bc0de;
+}
+.site-footer {
+    background: none repeat scroll 0 0 #333333;
+    border-top: 1px solid #E5E5E5;
+    color: #999999;
+  
+}
+.author-box{
+	display:table;
+}
+.author-avatar-single img{
+	border: 1px solid #BCD9F5;
+    border-radius: 3px;
+    height: 102px;
+    width: 102px;
+}
+.author-avatar img {
+    box-shadow: 0 0 0 2px #FFFFFF inset;
+    display: block;
+    padding: 2px;
+}
+.author-avatar{
+	float:left;
+}
+.author-description {
+    margin: 0 0 0 120px;
 }

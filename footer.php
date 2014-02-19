@@ -10,11 +10,17 @@
 
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'codernote' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'codernote' ), 'codernote', '<a href="http://tranhuychung.com/" rel="designer">Chung Tran</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="container">
+		<div class="row">
+			<?php dynamic_sidebar('sidebar-2');?>
+		</div>
+			<div class="site-info">
+				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'codernote' ), 'WordPress' ); ?></a>
+				<span class="sep"> | </span>
+				<?php printf( __( 'Theme: %1$s by %2$s.', 'codernote' ), 'codernote', '<a href="http://tranhuychung.com/" rel="designer">Chung Tran</a>' ); ?>
+			</div><!-- .site-info -->
+			
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
