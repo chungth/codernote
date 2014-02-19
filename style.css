@@ -86,12 +86,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
     float: right;
 }
 .entry-header {
-    height: 155px;
+    display:table;
     position: relative;
 }
-.entry-title{
-	margin-left:152px;
+.entry-header img{
+	margin-right:5px;
 }
+
 .entry-meta {
     bottom: 5px;
     position: absolute;
@@ -148,6 +149,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border-radius: 3px;
     height: 102px;
     width: 102px;
+}
+.author-name{
+	font-weight: 600;
+    margin-top: 0;
 }
 .author-avatar img {
     box-shadow: 0 0 0 2px #FFFFFF inset;

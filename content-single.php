@@ -13,7 +13,6 @@
 			} 
 		?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-
 		<div class="entry-meta">
 			<?php codernote_posted_on(); ?>
 		</div><!-- .entry-meta -->

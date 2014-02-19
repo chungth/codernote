@@ -20,17 +20,33 @@ function codernote_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'codernote' ); ?></h1>
-		<div class="nav-links">
-
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'codernote' ) ); ?></div>
-			<?php endif; ?>
-
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'codernote' ) ); ?></div>
-			<?php endif; ?>
-
+	
+		<div class="nav-links"> 
+				<?php
+	
+					$big = 999999999; // need an unlikely integer
+					
+					$paginate = paginate_links( array(
+						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+						'format' => '/page/%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'total' => $GLOBALS['wp_query']->max_num_pages,
+						'type' => 'array',
+						
+					) );
+					?>
+					<ul class="pagination pull-right">
+					  <?php
+					  $cur_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					  if($cur_page == 1) $cur_page--; // if cur_page is first page, no previous link in array
+					  foreach ( $paginate as $key => $page ) {
+						$class = ($cur_page == $key) ? 'class="active"':'';
+					    echo '<li '.$class.'>' . $page . '</li>';
+					  }
+					  ?>
+					</ul>
+		
+			 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php

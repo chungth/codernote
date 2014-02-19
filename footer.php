@@ -14,8 +14,8 @@
 		<div class="row">
 			<?php dynamic_sidebar('sidebar-2');?>
 		</div>
-			<div class="site-info">
-				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'codernote' ), 'WordPress' ); ?></a>
+			<div class="site-info pull-right">
+				&copy <?php bloginfo('name');?>, All rights reserved.
 				<span class="sep"> | </span>
 				<?php printf( __( 'Theme: %1$s by %2$s.', 'codernote' ), 'codernote', '<a href="http://tranhuychung.com/" rel="designer">Chung Tran</a>' ); ?>
 			</div><!-- .site-info -->

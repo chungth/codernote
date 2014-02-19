@@ -30,10 +30,12 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 </div> <!--end col content -->
+
 		<div class="col-md-4">
 		<?php get_sidebar(); ?>
 		<!--end col sidebar-->
-	</div> <!--end row-->
+		</div>
+		</div> <!--end row-->
 </div> <!--end container-->
 
 <?php get_footer(); ?>
