@@ -45,13 +45,13 @@
 			
 			<script type="IN/Share" data-url="<?php the_permalink(); ?>" data-counter="right"></script>
 		</li>
-		<li class="pull-right">
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'codernote' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<li class="pull-right btn-next-prev">
+		<?php next_post_link('%link', '<i class="fa fa-chevron-left"></i>', TRUE); ?> 
+		<?php next_post_link('%link', '<i class="fa fa-chevron-right"></i>', TRUE); ?> 
+		
+		
+
+	
 		</li>
 	</ul>
 	</div>

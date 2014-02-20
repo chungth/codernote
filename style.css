@@ -16,11 +16,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 */
+
+.navbar-primary {
+    border-bottom: 1px solid #ECECEC;
+}
+.navbar-primary .active {
+    background: none repeat scroll 0 0 #98D82A;
+}
+.navbar-primary .active >a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.navbar-primary li > a:hover {
+	background: none repeat scroll 0 0 #98D82A;
+	color: #ffffff;
+	text-decoration: none;
+}
 .share-post{
     background: none repeat scroll 0 0 #F7F7F7;
     border: 1px solid #EAEAEA;
     clear: both;
-    padding: 10px 0 ;
+   
     display: table;
     width:100%;
 }
@@ -30,8 +46,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .share-post li{
     float: left;
-    width: 106px;
+    margin-left: 10px;
 }
+.btn-next-prev a{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    float: left;
+    line-height: 1.43;
+    margin: 0;
+    padding: 3px 12px;
+    position: relative;s
+}
+.btn-next-prev > a:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right: 0 none;
+}
+.btn-next-prev > a:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
 #cn-social-connect{
 	background: none repeat scroll 0 0 #FFFFFF;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.698);
