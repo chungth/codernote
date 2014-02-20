@@ -20,7 +20,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
     background: none repeat scroll 0 0 #F7F7F7;
     border: 1px solid #EAEAEA;
     clear: both;
-    padding: 10px 0 20px 10px;
+    padding: 10px 0 ;
+    display: table;
+    width:100%;
 }
 .share-post > ul{
     list-style: none outside none;
@@ -89,15 +91,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
     display:table;
     position: relative;
 }
+.entry-header > h1 {
+    font-size: 26px;
+}
 .entry-header img{
 	margin-right:5px;
 }
 
-.entry-meta {
-    bottom: 5px;
-    position: absolute;
-    right: 0;
-}
 .entry-meta > span{
     margin-right: 10px;
     font-size: 85%;

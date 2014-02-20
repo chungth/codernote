@@ -15,13 +15,21 @@
 	  else if (w.attachEvent) { w.attachEvent("onload",go); }
 	}(window, document, 'script'));
 	</script>
+	<script type="text/javascript">
+		(function() {
+			var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+			li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+		})();
+	</script>
+	<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+	
 	<div class="share-post">
 	<ul>
 		<li>
 			<a href="https://twitter.com/share" 
 			class="twitter-share-button" data-url="<?php the_permalink(); ?>" 
 			data-text="<?php the_title(); ?>" 
-			data-via="<?php //echo tie_get_option( 'share_twitter_username' ) ?>" 
 			data-lang="en">tweet</a>
 		</li>
 		<li>
@@ -31,17 +39,19 @@
 		<li style="width:80px;"><div class="g-plusone" data-size="medium" data-href="<?php the_permalink(); ?>"></div>
 		</li>
 		<li><su:badge layout="2"></su:badge>
-			<script type="text/javascript">
-				(function() {
-					var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
-					li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
-					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
-				})();
-			</script>
+
 		</li>
 		<li>
-			<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+			
 			<script type="IN/Share" data-url="<?php the_permalink(); ?>" data-counter="right"></script>
+		</li>
+		<li class="pull-right">
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'codernote' ),
+				'after'  => '</div>',
+			) );
+		?>
 		</li>
 	</ul>
 	</div>
